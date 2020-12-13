@@ -45,9 +45,9 @@
 				</variable>
 				<variable type="float3" name="ambient_color">
 					<row>
-						<value>0.853281856</value>
-						<value>0.735372484</value>
-						<value>0.629254162</value>
+						<value>0.194019154</value>
+						<value>0.284543067</value>
+						<value>0.528957486</value>
 					</row>
 				</variable>
 				<variable type="float" name="Ks">
@@ -62,7 +62,7 @@
 				</variable>
 				<variable type="float" name="shininess">
 					<row>
-						<value>1</value>
+						<value>80</value>
 					</row>
 				</variable>
 				<variable type="float3" name="light_color">
@@ -93,8 +93,8 @@
 		<entry type="pinned" name="light_color" owner="Simple" />
 		<entry type="camera" fp="false">
 			<distance>6</distance>
-			<pitch>49</pitch>
-			<yaw>270</yaw>
+			<pitch>25</pitch>
+			<yaw>243</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0.436293423" g="0.436289042" b="0.436289042" a="0" />
