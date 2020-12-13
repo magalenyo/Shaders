@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<project version="2">
+	<pipeline>
+		<pass name="Simple" type="shader" active="true">
+			<shader type="vs" path="shaders\phongPrueba_SimpleVS.glsl" entry="main" />
+			<shader type="ps" path="shaders\phongPrueba_SimplePS.glsl" entry="main" />
+			<inputlayout>
+				<item value="Position" semantic="POSITION" />
+				<item value="Normal" semantic="NORMAL" />
+				<item value="Texcoord" semantic="TEXCOORD0" />
+			</inputlayout>
+			<rendertexture />
+			<items>
+				<item name="Sphere" type="geometry">
+					<type>Sphere</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<topology>TriangleList</topology>
+				</item>
+			</items>
+			<itemvalues />
+			<variables>
+				<variable type="float4x4" name="model" system="GeometryTransform" />
+				<variable type="float3" name="diffuse_color">
+					<row>
+						<value>0.486486495</value>
+						<value>0.174684331</value>
+						<value>0.174703062</value>
+					</row>
+				</variable>
+				<variable type="float3" name="light_dir">
+					<row>
+						<value>0</value>
+						<value>11.6999998</value>
+						<value>18.5</value>
+					</row>
+				</variable>
+				<variable type="float3" name="view_pos">
+					<row>
+						<value>0</value>
+						<value>0</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float3" name="ambient_color">
+					<row>
+						<value>0.853281856</value>
+						<value>0.735372484</value>
+						<value>0.629254162</value>
+					</row>
+				</variable>
+				<variable type="float" name="Ks">
+					<row>
+						<value>1</value>
+					</row>
+				</variable>
+				<variable type="float" name="Kd">
+					<row>
+						<value>1</value>
+					</row>
+				</variable>
+				<variable type="float" name="shininess">
+					<row>
+						<value>1</value>
+					</row>
+				</variable>
+				<variable type="float3" name="light_color">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+					</row>
+				</variable>
+				<variable type="float4x4" name="proj" system="Projection" />
+				<variable type="float4x4" name="view" system="View" />
+			</variables>
+			<macros />
+		</pass>
+	</pipeline>
+	<objects />
+	<cameras />
+	<settings>
+		<entry type="file" name="Simple" shader="vs" />
+		<entry type="file" name="Simple" shader="ps" />
+		<entry type="pinned" name="diffuse_color" owner="Simple" />
+		<entry type="pinned" name="light_dir" owner="Simple" />
+		<entry type="pinned" name="view_pos" owner="Simple" />
+		<entry type="pinned" name="ambient_color" owner="Simple" />
+		<entry type="pinned" name="Ks" owner="Simple" />
+		<entry type="pinned" name="Kd" owner="Simple" />
+		<entry type="pinned" name="shininess" owner="Simple" />
+		<entry type="pinned" name="light_color" owner="Simple" />
+		<entry type="camera" fp="false">
+			<distance>6</distance>
+			<pitch>49</pitch>
+			<yaw>270</yaw>
+			<roll>360</roll>
+		</entry>
+		<entry type="clearcolor" r="0.436293423" g="0.436289042" b="0.436289042" a="0" />
+		<entry type="usealpha" val="false" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="25" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="24" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="21" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="37" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="36" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="23" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="22" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="20" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimplePS.glsl" line="35" enabled="true" />
+		<entry type="bkpt" file="C:/Users/Miguel햚gelBuenoRive/Desktop/PHONG SHADER/shaders/phongPrueba_SimpleVS.glsl" line="17" enabled="true" />
+	</settings>
+	<plugindata />
+</project>
