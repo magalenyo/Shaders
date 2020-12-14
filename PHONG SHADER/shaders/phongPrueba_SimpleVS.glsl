@@ -9,11 +9,11 @@ uniform mat4 model;
 
 out vec3 surface_normal;
 out vec3 surface_position;
-out vec2 uv;
+out vec2 uv0;
 
 void main() {
    gl_Position 		= proj*view*model*vec4(vertex_position, 1.0);
    surface_position = (model*vec4(vertex_position, 1.0)).xyz;
    surface_normal	= transpose(inverse(mat3(model)))*vertex_normal;
-   uv = vertex_uv0;
+   uv0 = vertex_uv0;
 }

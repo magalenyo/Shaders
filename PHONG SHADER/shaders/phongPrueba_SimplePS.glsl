@@ -2,6 +2,7 @@
 
 in vec3 surface_normal;
 in vec3 surface_position;
+in vec2 uv0;
 
 uniform vec3 light_dir;
 uniform vec3 view_pos;
@@ -10,11 +11,14 @@ uniform float Ks;
 uniform float Kd;
 uniform float shininess;
 uniform vec3 light_color;
-uniform vec3 diffuse_color;
+
+uniform sampler2D diffuse_texture;
 
 out vec4 outColor;
 
 void main() {
+
+	vec3 diffuse_color = texture(diffuse_texture, uv0).xyz;
 	vec3 nlight_dir = normalize(light_dir);
 	float NL = max(dot(normalize(surface_normal), nlight_dir), 0.0);		// diffuse
 	

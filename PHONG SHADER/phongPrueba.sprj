@@ -11,24 +11,41 @@
 			</inputlayout>
 			<rendertexture />
 			<items>
-				<item name="Sphere" type="geometry">
-					<type>Sphere</type>
-					<width>1</width>
-					<height>1</height>
-					<depth>1</depth>
-					<topology>TriangleList</topology>
+				<item name="BakerHouse" type="model">
+					<filepath>BakerHouse.fbx</filepath>
+					<grouponly>false</grouponly>
 				</item>
 			</items>
-			<itemvalues />
+			<itemvalues>
+				<value variable="model" for="BakerHouse">
+					<row>
+						<value>1</value>
+						<value>0</value>
+						<value>0</value>
+						<value>0</value>
+					</row>
+					<row>
+						<value>0</value>
+						<value>1</value>
+						<value>0</value>
+						<value>0</value>
+					</row>
+					<row>
+						<value>0</value>
+						<value>0</value>
+						<value>1</value>
+						<value>0</value>
+					</row>
+					<row>
+						<value>0</value>
+						<value>0</value>
+						<value>0</value>
+						<value>1</value>
+					</row>
+				</value>
+			</itemvalues>
 			<variables>
 				<variable type="float4x4" name="model" system="GeometryTransform" />
-				<variable type="float3" name="diffuse_color">
-					<row>
-						<value>0.486486495</value>
-						<value>0.174684331</value>
-						<value>0.174703062</value>
-					</row>
-				</variable>
 				<variable type="float3" name="light_dir">
 					<row>
 						<value>0</value>
@@ -45,9 +62,9 @@
 				</variable>
 				<variable type="float3" name="ambient_color">
 					<row>
-						<value>0.194019154</value>
-						<value>0.284543067</value>
-						<value>0.528957486</value>
+						<value>0.52888298</value>
+						<value>0.615595698</value>
+						<value>0.845559835</value>
 					</row>
 				</variable>
 				<variable type="float" name="Ks">
@@ -62,7 +79,7 @@
 				</variable>
 				<variable type="float" name="shininess">
 					<row>
-						<value>80</value>
+						<value>1</value>
 					</row>
 				</variable>
 				<variable type="float3" name="light_color">
@@ -78,12 +95,14 @@
 			<macros />
 		</pass>
 	</pipeline>
-	<objects />
+	<objects>
+		<object type="texture" path="Baker_house.png" vflip="true" min_filter="Linear" mag_filter="Nearest" wrap_s="Repeat" wrap_t="Repeat" />
+	</objects>
 	<cameras />
 	<settings>
+		<entry type="property" name="Baker_house.png" item="image3D" />
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="file" name="Simple" shader="ps" />
-		<entry type="pinned" name="diffuse_color" owner="Simple" />
 		<entry type="pinned" name="light_dir" owner="Simple" />
 		<entry type="pinned" name="view_pos" owner="Simple" />
 		<entry type="pinned" name="ambient_color" owner="Simple" />
@@ -92,9 +111,9 @@
 		<entry type="pinned" name="shininess" owner="Simple" />
 		<entry type="pinned" name="light_color" owner="Simple" />
 		<entry type="camera" fp="false">
-			<distance>6</distance>
-			<pitch>25</pitch>
-			<yaw>243</yaw>
+			<distance>10</distance>
+			<pitch>35</pitch>
+			<yaw>54</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0.436293423" g="0.436289042" b="0.436289042" a="0" />
